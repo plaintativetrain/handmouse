@@ -24,123 +24,55 @@ Control your Mac's mouse cursor with just your hand and webcam! HandMouse is a g
 ## 📋 Table of Contents
 
 - [Features](#-features)
-- [Standalone macOS App](#-standalone-macos-app)
-- [Requirements](#-requirements)
-- [Installation](#-installation)
-  - [From Source](#from-source)
-  - [Using the Executable](#using-the-executable)
-- [Usage](#-usage)
-- [Gestures](#-gestures)
-- [Building from Source](#-building-from-source)
+- [Download](#-download)
+- [Usage Guide](#-usage-guide)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
 
-## 🎯 Standalone macOS App
+## 📥 Download
 
-This project can be packaged as a standalone macOS application - no Python installation required!
-
-### 📦 Quick Build
-```bash
-# One command to build, package, and test
-./build_and_package.sh
-```
-
-Your app will be in `dist/HandMouseControl.app`
-
-### 🚀 Distribution Options
-1. **ZIP file**: `HandMouseControl.zip` - Easy sharing
-2. **DMG installer**: Professional drag-to-install experience
-3. **Direct distribution**: Share the .app bundle
-4. **GitHub Releases**: Download pre-built executables from [Releases](https://github.com/YOUR_USERNAME/HandMouse/releases)
-
-See [DISTRIBUTION.md](DISTRIBUTION.md) for complete details.
-
-## 🔧 Requirements
-
-- **Python**: 3.7 or higher
-- **Webcam**: Built-in or USB camera
-- **Platform**: macOS (tested), Linux and Windows (may require adjustments)
-- **Permissions**: Camera and Accessibility access (macOS)
-
-## 📥 Installation
-
-### From Source
-
-1. **Clone the repository**:
-```bash
-git clone https://github.com/YOUR_USERNAME/HandMouse.git
-cd HandMouse
-```
-
-2. **Create and activate a virtual environment**:
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install required packages**:
-```bash
-pip install -r requirements.txt
-```
-
-### Using the Executable
+HandMouse is available as a standalone macOS application - no Python installation required!
 
 Download the latest release from the [Releases page](https://github.com/YOUR_USERNAME/HandMouse/releases):
 
 1. Download `HandMouseControl.app.zip`
-2. Unzip and drag to Applications folder
-3. Grant required permissions (see [USER_GUIDE.md](USER_GUIDE.md))
-4. Launch and enjoy!
+2. Unzip and drag to your Applications folder
+3. Launch the app
+4. Grant Camera and Accessibility permissions when prompted
 
-## 🎮 Usage
+**Requirements**:
+- macOS 10.13 (High Sierra) or later
+- Built-in or USB webcam
 
-### Running from Source
-```bash
-python hand_mouse_control.py
-```
+## 🎮 Usage Guide
 
-**Important for macOS users**: Grant Accessibility permissions:
-- Go to `System Preferences` → `Security & Privacy` → `Privacy` → `Accessibility`
-- Add Terminal (or your IDE) to allowed apps
+### How It Works
 
-## 🖐️ Gestures
+HandMouse tracks your hand movements using your webcam and translates them into mouse actions. The cursor tracking is based on the **ring finger base** (the knuckle where your ring finger meets your palm), which provides stable and precise control.
 
-| Gesture | Action | Description |
-|---------|--------|-------------|
-| **Move Hand** | Move Cursor | Move your hand to control cursor position |
-| **Index + Thumb Pinch** | Left Click (Hold) | Touch fingertips together and hold to drag |
-| **Middle + Thumb Pinch** | Right Click | Quick pinch for context menus |
-| **Ring + Thumb Pinch + Move** | Scroll | Pinch and move up/down to scroll with momentum |
+### Gestures
+
+| Gesture | Action | How To |
+|---------|--------|--------|
+| **Move Hand** | Control Cursor | The cursor follows your ring finger base position |
+| **Index + Thumb Pinch** | Left Click | Pinch your index fingertip to your thumb tip (hold to drag/select) |
+| **Middle + Thumb Pinch** | Right Click | Pinch your middle fingertip to your thumb tip |
+| **Ring + Thumb Pinch + Move** | Scroll | Pinch ring finger to thumb, then move hand up/down |
 
 ### Tips for Best Results
-- ✅ Use good lighting
-- ✅ Keep hand movements smooth
-- ✅ Position yourself clearly in front of camera
-- ✅ Practice gestures before important tasks
 
-## 🔨 Building from Source
+✅ **Keep your hand spread out** - Fingers should be clearly separated and visible
 
-Want to create the standalone macOS app?
+✅ **Face your palm toward the webcam** - Your hand should be clearly visible with all fingers in view
 
-1. **Activate virtual environment**:
-```bash
-source venv/bin/activate
-```
+✅ **Use good lighting** - Ensure your hand is well-lit for accurate tracking
 
-2. **Run the build script**:
-```bash
-chmod +x build_and_package.sh
-./build_and_package.sh
-```
+✅ **Smooth movements** - Move your hand gradually for better cursor control
 
-3. **Choose your distribution option**:
-   - Option 1: Create ZIP
-   - Option 2: Create DMG (requires `brew install create-dmg`)
-   - Option 3: Just test
-   - Option 4: All of the above
+✅ **Optimal distance** - Position your hand 1-2 feet from the webcam
 
-See [DISTRIBUTION.md](DISTRIBUTION.md) for advanced packaging options.
+✅ **Grant permissions** - Allow Camera and Accessibility access when prompted
 
 ## 🤝 Contributing
 
@@ -158,17 +90,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **OpenCV** - Computer vision library
 - **PyAutoGUI** - Cross-platform GUI automation
 
-## 📚 Documentation
-
-- [USER_GUIDE.md](USER_GUIDE.md) - Complete user guide with troubleshooting
-- [FEATURES.md](FEATURES.md) - Detailed feature descriptions and technical details
-- [DISTRIBUTION.md](DISTRIBUTION.md) - Guide for packaging and distributing
-- [QUICK_REFERENCE.md](QUICK_REFERENCE.md) - Quick reference for gestures
-
 ## ⚠️ Disclaimer
 
 This is an experimental project for educational and accessibility purposes. It may not be suitable for precision work or production use. Use at your own discretion.
 
 ---
+
 
 
