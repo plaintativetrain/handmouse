@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="icon.png" alt="HandMouse Logo" width="200"/>
+</div>
+
 # HandMouse 🖐️🖱️
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
